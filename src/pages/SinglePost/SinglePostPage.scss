@@ -1,0 +1,211 @@
+@import "../../utilites/variables.scss";
+
+.singlePost {
+    border: 2px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+    background: $primary-color;
+    min-height: 100vh;
+    padding: 2rem 8rem;
+    
+    .singlePost__content {
+        padding: 1rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        .singlePost__contentHeader {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            .singlePost__contentHeaderBack {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .singlePost__contentHeaderBackButton {
+                    border: 2px solid $secondary-color;
+                    border-radius: 1rem;
+                    text-decoration: none;
+                    color: $font-color;
+                    font-size: 1.6rem;
+                    padding: 1rem 1.5rem;
+                    transition: all 0.3s ease-in-out;
+                    i {
+                      margin-right: 1rem;
+                    }
+                    span {
+                      font-family: $accent-font;
+                      letter-spacing: 0.3rem;
+                    }
+                    &:hover {
+                        background: $secondary-color;
+                        i {
+                            color: $primary-color;
+                        }
+                        span {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+         
+            .singlePost__contentHeaderPostBy {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h5 {
+                    color: $font-color;
+                    font-size: 3rem;
+                    font-family: $main-font;
+                }
+                span {
+                    font-family: $accent-font;
+                    opacity: 0.5;
+                }
+            }
+            .singlePost__contentHeaderPostStats {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                // padding: 0 3rem;
+                .singlePost__contentHeaderPostShowStats {
+                    display: flex;
+                    flex-direction: column;
+                    // text-align: right;
+                    // width: 50%;
+                    .singlePost__contentHeaderPostShowStatsLikes, .singlePost__contentHeaderPostShowStatsPostDate {
+                        .likes, .postDate {
+                            h6 {
+                                color: $font-color;
+                                font-size: 1.3rem;
+                                margin: 0.3rem 0;
+                                font-family: $accent-font;
+                                letter-spacing: 0.2rem;
+                                padding-left: 0.1rem;  
+                                span {
+                                    color: $font-color;
+                                    // opacity: 0.7;
+                                    font-family: $accent-font;
+                                    opacity: 0.7;
+                                    font-size: 1rem;
+                                }
+                            }
+                          
+                        }
+                        .singlePost__contentHeaderPostHideStatsButton {
+                            font-family: $accent-font;
+                            font-size: 1.2rem;
+                            padding: 0 0.5rem;
+                            background: $secondary-color;
+                            border: 2px solid $secondary-color;
+                            border-radius: 0.5rem;
+                            display: flex;
+                            margin: auto;
+                            cursor: pointer;
+                        }
+                    }
+                  
+ 
+                    .singlePost__contentHeaderPostStatsDivider {
+                        border: 2px solid $secondary-color;
+                        border-radius: 1rem;
+                        opacity: 0.3;
+                        // width: 70%;
+                    }
+                }
+                .singlePost__contentHeaderShowStatsButton {
+                    font-family: $accent-font;
+                    font-size: 1.5rem;
+                    background: $secondary-color;
+                    border: 2px solid $secondary-color;
+                    border-radius: 0.5rem;
+                    padding: 0 0.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .singlePost__contentMain {
+            // border: 2px solid $secondary-color-shadow;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            width: 80%;
+            margin: 2rem auto;
+            background: rgb(34,34,34);
+            background: linear-gradient(124deg, rgba(34,34,34,1) 0%, rgb(56, 56, 56) 100%);
+            .singlePost__contentMainPostText {
+                color: $font-color;
+                font-family: $main-font;
+                font-size: 1.5rem;
+            }
+        }
+   
+    }
+
+
+    .singlePost__comments {
+        border-top: 2px solid rgba(197, 255, 197, 0.2);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .singlePost__addComment {
+            // border: 2px solid blue;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 3rem;
+            padding: 0 5rem;
+            .singlePost__addCommentTextarea {
+                display: flex;
+                font-family: $main-font;
+                font-size: 1.2rem;
+                border-radius: 0.5rem;
+                padding: 0.7rem 1rem;
+                background: rgba(255, 255, 255, 0.9);
+                &:focus {
+                    outline: 3px solid $secondary-color;
+                }  
+              
+            }
+            .singlePost__addCommentButton {
+                border: 2px solid $secondary-color;
+                color: $primary-color;
+                background: $secondary-color;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                width: 20%;
+                margin-top: 1rem;
+                align-self: flex-end;
+                font-family: $accent-font;
+                font-size: 1.5rem;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    border: 2px solid $secondary-color;
+                    background: $primary-color;
+                    color: $secondary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        .singlePost__commentsList {
+            // border: 2px solid white;
+            margin-top: 2rem;
+            padding: 0 5rem;
+            .singlePost__commentsListTitle {
+                margin-bottom: 1rem;
+                h4 {
+                    color: $secondary-color;
+                    font-family: $accent-font;
+                    font-size: 2rem;
+                    letter-spacing: 0.2rem;
+                    text-decoration: underline;
+
+                }
+            }
+            .singlePost__commentsListComments {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            
+        }
+    }
+}

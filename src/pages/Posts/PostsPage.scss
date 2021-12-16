@@ -1,0 +1,58 @@
+@import "../../utilites/variables.scss";
+
+.postsPage {
+    background: $primary-color;
+    color: $font-color;
+    min-height: 100vh;
+    padding: 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    .postsPage__dropdown {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-family: $accent-font;
+        margin-bottom: 2rem;
+        p {
+            color: $font-color;
+            font-family: $accent-font;
+            letter-spacing: 0.05rem;
+            font-size: 1.8rem;
+        }
+        .postsPage__dropdownFilterOptions {
+            display: flex;
+            justify-content: space-around;
+            width: 13rem;
+            h5 {
+               font-size: 1.8rem;
+               cursor: pointer;
+               opacity: 0.3;
+               color: $secondary-color;
+               transform: scale(0.97);
+               &.activeFilter {
+                   opacity: 0.9;
+                   transform: scale(1.03);
+                   text-shadow: 0px 0px 5px $secondary-color-shadow;
+ 
+            }
+        }
+    }
+    .postPage__filterDivider {
+       border: 2px solid $secondary-color;
+       border-radius: 10rem;
+       margin: 0.5rem 0;
+    }
+    }
+    .postsPage__postsList {
+        transition: all 0.5s ease-in-out;
+        &.newest {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &.oldest {
+            display: flex;
+            flex-direction: column;
+        }
+   
+    }
+}

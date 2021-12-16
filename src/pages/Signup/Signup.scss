@@ -1,0 +1,106 @@
+@import "../../utilites/variables.scss";
+
+.signup {
+    background: $primary-color;
+    min-height: 100vh;
+    padding: 5rem 25rem;
+    display: flex;
+    flex-direction: column;
+    .signup__title {
+        color: $secondary-color;
+        display: flex;
+        align-self: center;
+        font-family: $accent-font;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+    }
+    .signup__formContainer {
+        border: 2px solid $secondary-color;
+        border-radius: 0.2rem;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        background: $primary-color;
+        background: linear-gradient(124deg, rgb(20, 20, 20) 0%, rgb(30, 30, 30) 100%);
+        label {
+            color: $secondary-color;
+            font-family: $accent-font;
+            font-size: 2rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.2rem;
+        }
+        span {
+            color: $error-message-color;
+            font-size: 1.4rem;
+            margin-bottom: 0.2rem;
+            font-family: $accent-font;
+        }
+        #signup__formInput {
+            padding: 0.5rem;
+            font-size: 1.3rem;
+            font-family: $main-font;
+            margin-bottom: 2rem;
+            &:focus {
+                outline: 2px solid $secondary-color-shadow;
+            }
+        }
+        .signup__formButtons {
+            display: flex;
+            width: 62%;
+            align-items: flex-end;
+            align-self: flex-end;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            .formButtons__signUpButtonContainer {
+                .signup__btn {
+                    border: 2px solid $secondary-color;
+                    border-radius: 0.5rem;
+                    font-family: $accent-font;
+                    font-size: 2rem;
+                    background: $secondary-color;
+                    color: $primary-color;
+                    letter-spacing: 0.3rem;
+                    // padding: 0 1rem;
+                    width: 10rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        border: 2px solid $secondary-color;
+                        background: $primary-color;
+                        color: $secondary-color;
+                        transform: scale(0.99);
+                    }
+                }   
+            }
+            .formButtons__loginButtonContainer {
+                line-height: 1.3;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .login__btnHeader {
+                    font-family: $main-font;
+                    color: $font-color;
+                    font-size: 1rem;
+                    opacity: 0.5;
+                    
+                }
+                .login__btn {
+                 color: $secondary-color;
+                 opacity: 0.7;
+                 font-family: $accent-font;
+                 font-size: 1.2rem;
+                 letter-spacing: 0.15rem;
+                 transition: all 0.3s ease-in-out;
+                 &:hover {
+                     opacity: 0.9;
+                     text-shadow: 0px 0px 1px $secondary-color;
+                 }
+             }
+             }
+          
+        }
+   
+    }
+}

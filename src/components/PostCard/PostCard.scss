@@ -1,0 +1,162 @@
+@import "../../utilites/variables.scss";
+
+.postCard {
+    border: 2px solid $secondary-color;
+    border-radius: 0.2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    background: $primary-color;
+    background: linear-gradient(124deg, rgb(20, 20, 20) 0%, rgb(30, 30, 30) 100%);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 15px $secondary-color;
+    }
+    .postCard__header {
+        margin-bottom: 1rem;
+        .postCard__headerLink {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            
+            &:hover {
+                span {
+                    background: $primary-color;
+                    color: $secondary-color;
+                    
+                }
+                h6 {
+                    font-size: 2.55rem;
+                    opacity: 0.6;
+                }
+            }
+            span {
+                border: 2px solid $secondary-color;
+                border-radius: 50%;
+                color: $primary-color;
+                background: $secondary-color;
+                font-family: $accent-font;
+                font-size: 3rem;
+                padding: 1rem 2.8rem;
+                transition: all 0.3s ease-in-out;
+            }
+            h6 {
+                font-size: 2.5rem;
+                font-family: $accent-font;
+                color: $font-color;
+                opacity: 0.5;
+                margin-left: 1rem;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    .postCard__main {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(0.99);
+        }
+        
+        .postCard__mainPostTitle {
+            font-family: $accent-font;
+            font-size: 2rem;
+            text-decoration: underline;
+            letter-spacing: 0.1rem;
+        }
+        .postCard__mainPostText {
+            font-family: $main-font;
+            font-size: 1.5rem;
+        }
+        .postCard__mainPostDate {
+            font-family: $accent-font;
+            font-size: 1.2rem;
+            opacity: 0.5;
+            letter-spacing: 0.1rem;
+        }
+        .postCard__mainPostDivider {
+            border: 2px solid $secondary-color;
+            border-radius: 1rem;
+            opacity: 0.4;
+            margin: 1rem 0;
+        }
+    }
+    .postCard__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem 0 1rem;
+        .postCard__footerStats {
+            display: flex;
+            .postCard__footerLikes {
+                font-family: $accent-font;
+                color: $font-color;
+                display: flex;
+                align-items: center;
+                margin-right: 1.5rem;
+                i {
+                    font-size: 1.7rem;
+                    margin-right: 0.5rem;
+                    cursor: pointer;
+                    transition: all 0.1s ease-in-out;
+                    &.unlikeBtn {
+                        color: $secondary-color;
+                        // text-shadow: 0 0 8px $secondary-color;
+                    }
+                    &.likeBtn {
+                        color: $font-color;
+                        text-shadow: none;
+                    }
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+                }
+                span {
+                    font-size: 1.5rem;
+                    font-family: $accent-font;
+                }
+        
+            }
+            .postCard__footerComments {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                i {
+                    font-size: 1.7rem;
+                    margin-right: 0.5rem;
+                }
+                span {
+                    font-size: 1.5rem;
+                    font-family: $accent-font;
+                }
+                &:hover {
+                    transform: scale(1.01);
+                }            
+            }
+        }
+       
+   
+        .postCard__footerDeleteButton {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            i {
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+            }
+            span {
+                font-family: $accent-font;
+                font-size: 1.2rem;
+            }
+            &:hover {
+                color: $error-message-color;
+            }
+        }
+              
+    }
+   
+}
