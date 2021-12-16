@@ -17,20 +17,24 @@ const SinglePostPage = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/posts/byId/${id}`).then((response) => {
-      setSelectedPost(response.data);
-      console.log(createdAt);
-    });
+    axios
+      .get(`https://fcruns-api.herokuapp.com/posts/byId/${id}`)
+      .then((response) => {
+        setSelectedPost(response.data);
+        console.log(createdAt);
+      });
 
-    axios.get(`http://localhost:3001/comments/${id}`).then((response) => {
-      setComments(response.data);
-    });
+    axios
+      .get(`https://fcruns-api.herokuapp.com/comments/${id}`)
+      .then((response) => {
+        setComments(response.data);
+      });
   }, []);
 
   const addComment = () => {
     axios
       .post(
-        "http://localhost:3001/comments",
+        "https://fcruns-api.herokuapp.com/comments",
         {
           commentBody: newComment,
           PostId: id,

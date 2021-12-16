@@ -12,7 +12,7 @@ const CommentCard = ({ comment, comments, setComments }) => {
 
   const deleteComment = (id) => {
     axios
-      .delete(`http://localhost:3001/comments/${id}`, {
+      .delete(`https://fcruns-api.herokuapp.com/comments/${id}`, {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },

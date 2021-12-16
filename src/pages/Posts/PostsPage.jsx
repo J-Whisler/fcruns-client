@@ -19,7 +19,7 @@ const PostsPage = () => {
       alert("You must be logged in to see posts!");
     } else {
       axios
-        .get("http://localhost:3001/posts", {
+        .get("https://fcruns-api.herokuapp.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {

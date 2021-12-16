@@ -14,12 +14,16 @@ const ProfilePage = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/auth/userinfo/${id}`).then((response) => {
-      setUser(response.data);
-    });
-    axios.get(`http://localhost:3001/posts/byUserId/${id}`).then((response) => {
-      setListOfUserPosts(response.data);
-    });
+    axios
+      .get(`https://fcruns-api.herokuapp.com/auth/userinfo/${id}`)
+      .then((response) => {
+        setUser(response.data);
+      });
+    axios
+      .get(`https://fcruns-api.herokuapp.com/posts/byUserId/${id}`)
+      .then((response) => {
+        setListOfUserPosts(response.data);
+      });
   }, []);
   //   console.log(listOfUserPosts);
 

@@ -38,7 +38,7 @@ const PostCard = ({
   const likeAPost = (postId) => {
     axios
       .post(
-        "http://localhost:3001/likes",
+        "https://fcruns-api.herokuapp.com/likes",
         { PostId: postId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )
@@ -78,7 +78,7 @@ const PostCard = ({
 
   const deletePost = (id) => {
     axios
-      .delete(`http://localhost:3001/posts/${id}`, {
+      .delete(`https://fcruns-api.herokuapp.com/posts/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -141,62 +141,6 @@ const PostCard = ({
         )}
       </div>
     </div>
-    // <div className="postCard">
-    //   <div
-    //     className="postCard__body"
-    //     onClick={() => {
-    //       history.push(`/singlepost/${post.id}`);
-    //     }}
-    //   >
-    //     <div className="postCard__user">
-    //       <p>{post.username.substring(0, 1)}</p>
-    //       <Link to={`/profile/${post.UserId}`}>
-    //         <h6>@{post.username}</h6>
-    //       </Link>
-    //     </div>
-    //     <div className="postCard__title">
-    //       <h3>{post.title}</h3>
-    //     </div>
-    //     <div className="postCard__text">
-    //       <p>{post.postText}</p>
-    //     </div>
-    //   </div>
-    //   <div className="postCard__footer">
-    //     <p className="postCard__textPostDate">{postDate}</p>
-    //     <div className="postCard__footerDivider"></div>
-    //     <div className="postCard__footerStats">
-    //       <div className="postCard__footerStatsLikes">
-    //         <i
-    //           className={
-    //             likedPosts.includes(post.id)
-    //               ? "fas fa-thumbs-up unlikeBtn"
-    //               : "fas fa-thumbs-up likeBtn"
-    //           }
-    //           onClick={() => likeAPost(post.id)}
-    //         />
-    //         <span>{post.Likes.length}</span>
-    //       </div>
-    //       <div
-    //         onClick={() => {
-    //           history.push(`/singlepost/${post.id}`);
-    //         }}
-    //         className="postCard__footerStatsComments"
-    //       >
-    //         <i className="fas fa-comment">
-    //           <span>Click to see or add comments</span>
-    //         </i>
-    //       </div>
-    //       {authState.username === post.username && (
-    //         <i
-    //           onClick={() => deletePost(post.id)}
-    //           className="i fas fa-trash-alt deletePostBtn"
-    //         >
-    //           <span>Delete Post</span>
-    //         </i>
-    //       )}
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

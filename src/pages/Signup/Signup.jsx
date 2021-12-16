@@ -20,7 +20,7 @@ const Signup = () => {
   });
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/auth", data).then(() => {
+    axios.post("https://fcruns-api.herokuapp.com/auth", data).then(() => {
       console.log(data);
     });
   };
@@ -51,11 +51,7 @@ const Signup = () => {
           />
           <div className="signup__formButtons">
             <div className="formButtons__signUpButtonContainer">
-              <button
-                className="signup__button"
-                type="submit"
-                className="signup__btn"
-              >
+              <button type="submit" className="signup__btn">
                 Sign Up
               </button>
             </div>
