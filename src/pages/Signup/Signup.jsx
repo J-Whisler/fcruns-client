@@ -3,9 +3,11 @@ import "./Signup.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Signup = () => {
+  let history = useHistory();
+
   const initialValues = {
     username: "",
     password: "",
@@ -23,6 +25,7 @@ const Signup = () => {
     axios.post("https://fcruns-api.herokuapp.com/auth", data).then(() => {
       console.log(data);
     });
+    history.push("/login");
   };
 
   return (
